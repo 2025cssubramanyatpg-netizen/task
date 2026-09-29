@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vitality | Health Awareness</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: #183b2b;
+            background: #f5fbf6;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        section {
+            padding: 90px 7%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(24, 59, 43, 0.08);
+        }
+
+        nav {
+            max-width: 1250px;
+            margin: auto;
+            height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 25px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 22px;
+            font-weight: 700;
+            color: #146b45;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+            background: #dff5e8;
+
+            font-size: 21px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #18a263;
+        }
+
+        .nav-btn {
+            background: #146b45;
+            color: white !important;
+            padding: 10px 19px;
+            border-radius: 25px;
+        }
+
+        .nav-btn:hover {
+            background: #0e5235;
+        }
+
+        .theme-btn {
+            border: none;
+            background: #e8f7ed;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 120px;
+
+            background:
+                radial-gradient(circle at 85% 20%, #ccefdc 0%, transparent 25%),
+                radial-gradient(circle at 10% 80%, #e2f7e9 0%, transparent 30%),
+                #f5fbf6;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 15px;
+            border-radius: 30px;
+
+            background: #e1f6e9;
+            color: #146b45;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 1.05;
+
+            color: #123b29;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #19a364;
+        }
+
+        .hero p {
+            max-width: 580px;
+
+            font-size: 18px;
+            color: #60756a;
+
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            padding: 14px 25px;
+            border-radius: 30px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #146b45;
+            color: white;
+
+            box-shadow: 0 12px 25px rgba(20, 107, 69, 0.2);
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            background: #0e5235;
+        }
+
+        .secondary-btn {
+            border: 1px solid #b7d9c3;
+            color: #146b45;
+        }
+
+        .secondary-btn:hover {
+            background: #e3f5e9;
+        }
+
+
+        /* HERO VISUAL */
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-image {
+            height: 530px;
+
+            border-radius: 35px;
+
+            background:
+                linear-gradient(
+                    rgba(10, 65, 39, 0.05),
+                    rgba(10, 65, 39, 0.05)
+                ),
+                url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1000&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            box-shadow: 0 30px 70px rgba(34, 91, 62, 0.18);
+        }
+
+        .floating-card {
+            position: absolute;
+
+            background: white;
+
+            padding: 18px 22px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 15px 40px rgba(25, 74, 48, 0.15);
+        }
+
+        .card-one {
+            left: -35px;
+            bottom: 45px;
+        }
+
+        .card-two {
+            right: -25px;
+            top: 45px;
+        }
+
+        .floating-card strong {
+            display: block;
+            font-size: 22px;
+            color: #146b45;
+        }
+
+        .floating-card small {
+            color: #718078;
+        }
+
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 55px;
+        }
+
+        .section-title span {
+            color: #18a263;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 44px;
+            margin: 10px 0 15px;
+            color: #123b29;
+        }
+
+        .section-title p {
+            color: #718078;
+        }
+
+
+        /* =========================
+           FEATURES
+        ========================= */
+
+        .features {
+            background: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .feature-card {
+            padding: 30px 25px;
+
+            background: #f5fbf6;
+
+            border: 1px solid #e3f0e7;
+            border-radius: 22px;
+
+            transition: 0.35s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(35, 91, 61, 0.1);
+        }
+
+        .feature-icon {
+            width: 58px;
+            height: 58px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 17px;
+
+            background: #dff5e7;
+
+            font-size: 27px;
+
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: #174d34;
+        }
+
+        .feature-card p {
+            color: #708078;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOD
+        ========================= */
+
+        .food {
+            background: #eef9f1;
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .food-card {
+            overflow: hidden;
+
+            background: white;
+
+            border-radius: 25px;
+
+            box-shadow: 0 10px 30px rgba(28, 81, 52, 0.07);
+
+            transition: 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .food-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .food-info {
+            padding: 24px;
+        }
+
+        .food-info h3 {
+            margin-bottom: 8px;
+        }
+
+        .food-info p {
+            color: #728077;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           HEALTH TIPS
+        ========================= */
+
+        .tips {
+            background: white;
+        }
+
+        .tips-wrapper {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .tips-image {
+            min-height: 550px;
+
+            border-radius: 30px;
+
+            background:
+                url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tip-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .tip {
+            display: flex;
+            gap: 18px;
+
+            padding: 20px;
+
+            border-radius: 18px;
+
+            background: #f6fbf7;
+
+            border: 1px solid #e4f0e7;
+        }
+
+        .tip-number {
+            min-width: 42px;
+            height: 42px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: #146b45;
+            color: white;
+
+            font-weight: 700;
+        }
+
+        .tip h3 {
+            margin-bottom: 5px;
+        }
+
+        .tip p {
+            color: #748078;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           AWARENESS
+        ========================= */
+
+        .awareness {
+            background: #123b29;
+            color: white;
+        }
+
+        .awareness .section-title h2,
+        .awareness .section-title span {
+            color: white;
+        }
+
+        .awareness .section-title p {
+            color: #b8d1c1;
+        }
+
+        .awareness-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .awareness-card {
+            padding: 30px;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            border-radius: 23px;
+
+            background: rgba(255,255,255,0.06);
+
+            backdrop-filter: blur(10px);
+
+            transition: 0.3s;
+        }
+
+        .awareness-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+
+        .awareness-card .big-icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .awareness-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .awareness-card p {
+            color: #b9d0c2;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           STATISTICS
+        ========================= */
+
+        .stats {
+            padding: 55px 7%;
+            background: #dff4e6;
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            text-align: center;
+        }
+
+        .stat h2 {
+            color: #146b45;
+            font-size: 40px;
+        }
+
+        .stat p {
+            color: #60756a;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #f5fbf6;
+        }
+
+        .contact-box {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+
+            background: white;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            box-shadow: 0 20px 60px rgba(26, 81, 50, 0.1);
+        }
+
+        .contact-info {
+            padding: 50px;
+            background: #146b45;
+            color: white;
+        }
+
+        .contact-info h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #cce5d4;
+            margin-bottom: 30px;
+        }
+
+        .contact-detail {
+            margin: 18px 0;
+        }
+
+        .contact-form {
+            padding: 50px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+
+            padding: 14px 16px;
+
+            border: 1px solid #dce9df;
+            border-radius: 12px;
+
+            outline: none;
+
+            font-family: inherit;
+
+            transition: 0.3s;
+        }
+
+        .input-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: #19a364;
+            box-shadow: 0 0 0 3px #dff5e8;
+        }
+
+        .submit-btn {
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+            border-radius: 25px;
+
+            background: #146b45;
+            color: white;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #0e5235;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0d2c1e;
+            color: white;
+
+            padding: 30px 7%;
+
+            text-align: center;
+        }
+
+        footer p {
+            color: #9ab5a5;
+            font-size: 14px;
+        }
+
+        .heart {
+            color: #58d695;
+        }
+
+
+        /* =========================
+           SCROLL BUTTON
+        ========================= */
+
+        #topBtn {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #146b45;
+            color: white;
+
+            cursor: pointer;
+
+            display: none;
+
+            font-size: 20px;
+
+            z-index: 999;
+        }
+
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        .menu-btn {
+            display: none;
+
+            border: none;
+            background: transparent;
+
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            background: #0e1913;
+            color: #e4f1e8;
+        }
+
+        body.dark header {
+            background: rgba(14, 25, 19, 0.9);
+        }
+
+        body.dark .logo,
+        body.dark .hero h1,
+        body.dark .section-title h2 {
+            color: #e8f6ec;
+        }
+
+        body.dark .hero,
+        body.dark .tips,
+        body.dark .contact {
+            background: #0e1913;
+        }
+
+        body.dark .features,
+        body.dark .food {
+            background: #122219;
+        }
+
+        body.dark .feature-card,
+        body.dark .food-card,
+        body.dark .tip,
+        body.dark .contact-box {
+            background: #172a1f;
+            border-color: #284334;
+        }
+
+        body.dark .feature-card p,
+        body.dark .food-info p,
+        body.dark .tip p,
+        body.dark .section-title p {
+            color: #a7b9ad;
+        }
+
+        body.dark .food-info h3,
+        body.dark .feature-card h3,
+        body.dark .tip h3 {
+            color: #e5f3e9;
+        }
+
+        body.dark .input-group input,
+        body.dark .input-group textarea {
+            background: #122219;
+            color: white;
+            border-color: #345441;
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: 0.8s ease;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 950px) {
+
+            .hero-content,
+            .tips-wrapper,
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .food-grid,
+            .awareness-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-visual {
+                margin-top: 30px;
+            }
+
+            .tips-image {
+                min-height: 400px;
+            }
+        }
+
+
+        @media (max-width: 700px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .nav-links {
+                position: absolute;
+
+                top: 75px;
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                flex-direction: column;
+
+                padding: 25px;
+
+                display: none;
+
+                box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            body.dark .nav-links {
+                background: #122219;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding-top: 110px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-image {
+                height: 400px;
+            }
+
+            .card-one {
+                left: 10px;
+            }
+
+            .card-two {
+                right: 10px;
+            }
+
+            .feature-grid,
+            .food-grid,
+            .awareness-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title h2 {
+                font-size: 36px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 35px 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <nav>
+
+            <a href="#home" class="logo">
+                <span class="logo-icon">🌿</span>
+                Vitality
+            </a>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+                <li><a href="#food">Healthy Food</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="#awareness">Awareness</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
+
+                <li>
+                    <button class="theme-btn" onclick="toggleDarkMode()" id="themeBtn">
+                        🌙
+                    </button>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="fade-up">
+
+                <div class="badge">
+                    🌱 YOUR HEALTH MATTERS
+                </div>
+
+                <h1>
+                    Build a healthier
+                    <span>life.</span>
+                </h1>
+
+                <p>
+                    Your health is your greatest wealth. Discover simple,
+                    practical habits that can help you eat better, move more,
+                    sleep well and live a happier life.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#food" class="primary-btn">
+                        Explore Healthy Living →
+                    </a>
+
+                    <a href="#awareness" class="secondary-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual fade-up">
+
+                <div class="hero-image"></div>
+
+                <div class="floating-card card-one">
+                    <strong>8K+</strong>
+                    <small>Steps a day</small>
+                </div>
+
+                <div class="floating-card card-two">
+                    <strong>8 hrs</strong>
+                    <small>Quality sleep</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HEALTH PILLARS
+    ========================= -->
+
+    <section class="features">
+
+        <div class="container">
+
+            <div class="section-title fade-up">
+
+                <span>Healthy Living</span>
+
+                <h2>
+                    Small habits. Big changes.
+                </h2>
+
+                <p>
+                    A healthy lifestyle is created through simple choices
+                    repeated every day.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card fade-up">
+
+                    <div class="feature-icon">🥗</div>
+
+                    <h3>Healthy Food</h3>
+
+                    <p>
+                        Fill your plate with colorful vegetables,
+                        fruits, whole grains and nutritious foods.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card fade-up">
+
+                    <div class="feature-icon">🏃</div>
+
+                    <h3>Exercise</h3>
+
+                    <p>
+                        Stay active through walking, sports,
+                        stretching or your favorite physical activity.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card fade-up">
+
+                    <div class="feature-icon">💧</div>
+
+                    <h3>Hydration</h3>
+
+                    <p>
+                        Drink enough water throughout the day
+                        to support your body's everyday functions.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card fade-up">
+
+                    <div class="feature-icon">😴</div>
+
+                    <h3>Good Sleep</h3>
+
+                    <p>
+                        Give your body and mind enough time to
+                        rest, recover and recharge.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOD SECTION
+    ========================= -->
+
+    <section class="food" id="food">
+
+        <div class="container">
+
+            <div class="section-title fade-up">
+
+                <span>Eat Smart</span>
+
+                <h2>
+                    Food is your body's fuel.
+                </h2>
+
+                <p>
+                    Choose a balanced variety of foods and make every meal count.
+                </p>
+
+            </div>
+
+
+            <div class="food-grid">
+
+                <div class="food-card fade-up">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=85"
+                        alt="Fresh vegetables"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>Colorful Vegetables</h3>
+
+                        <p>
+                            Add different vegetables to your meals
+                            for variety, flavor and nutrients.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card fade-up">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=800&q=85"
+                        alt="Healthy fruits"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>Fresh Fruits</h3>
+
+                        <p>
+                            Fruits can be a delicious part of a
+                            balanced and varied eating pattern.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="food-card fade-up">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=85"
+                        alt="Healthy salad"
+                    >
+
+                    <div class="food-info">
+
+                        <h3>Balanced Meals</h3>
+
+                        <p>
+                            Combine vegetables, whole grains and
+                            protein-rich foods for satisfying meals.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TIPS SECTION
+    ========================= -->
+
+    <section class="tips" id="tips">
+
+        <div class="container">
+
+            <div class="tips-wrapper">
+
+                <div class="tips-image fade-up"></div>
+
+
+                <div>
+
+                    <div class="section-title" style="text-align:left; margin-left:0;">
+
+                        <span>Daily Wellness</span>
+
+                        <h2>
+                            Simple tips for a healthier day.
+                        </h2>
+
+                        <p>
+                            You don't need to change everything at once.
+                            Start with one healthy habit today.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tip-list">
+
+                        <div class="tip fade-up">
+
+                            <div class="tip-number">01</div>
+
+                            <div>
+                                <h3>Drink More Water</h3>
+
+                                <p>
+                                    Keep water nearby and drink regularly
+                                    throughout the day.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="tip fade-up">
+
+                            <div class="tip-number">02</div>
+
+                            <div>
+                                <h3>Move Your Body</h3>
+
+                                <p>
+                                    Take walking breaks and find physical
+                                    activities you genuinely enjoy.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="tip fade-up">
+
+                            <div class="tip-number">03</div>
+
+                            <div>
+                                <h3>Protect Your Sleep</h3>
+
+                                <p>
+                                    Create a relaxing bedtime routine and
+                                    maintain a consistent sleep schedule.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="tip fade-up">
+
+                            <div class="tip-number">04</div>
+
+                            <div>
+                                <h3>Take Care of Your Mind</h3>
+
+                                <p>
+                                    Make time for relaxation, hobbies,
+                                    friends and meaningful activities.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         AWARENESS SECTION
+    ========================= -->
+
+    <section class="awareness" id="awareness">
+
+        <div class="container">
+
+            <div class="section-title fade-up">
+
+                <span>Health Awareness</span>
+
+                <h2>
+                    Know your health. Protect your future.
+                </h2>
+
+                <p>
+                    Awareness helps us recognize healthy habits,
+                    understand risks and make informed choices.
+                </p>
+
+            </div>
+
+
+            <div class="awareness-grid">
+
+                <div class="awareness-card fade-up">
+
+                    <div class="big-icon">🧠</div>
+
+                    <h3>Mental Wellbeing</h3>
+
+                    <p>
+                        Mental wellbeing is an important part of overall health.
+                        Make time for rest, connection and activities you enjoy.
+                    </p>
+
+                </div>
+
+
+                <div class="awareness-card fade-up">
+
+                    <div class="big-icon">❤️</div>
+
+                    <h3>Heart Health</h3>
+
+                    <p>
+                        Regular physical activity, balanced nutrition,
+                        sufficient sleep and avoiding tobacco can support
+                        cardiovascular health.
+                    </p>
+
+                </div>
+
+
+                <div class="awareness-card fade-up">
+
+                    <div class="big-icon">🩺</div>
+
+                    <h3>Regular Checkups</h3>
+
+                    <p>
+                        Routine healthcare visits and appropriate screening
+                        can help identify health concerns early.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATISTICS
+    ========================= -->
+
+    <section class="stats">
+
+        <div class="stats-grid">
+
+            <div class="stat fade-up">
+
+                <h2>24/7</h2>
+                <p>Care for your wellbeing</p>
+
+            </div>
+
+
+            <div class="stat fade-up">
+
+                <h2>8+</h2>
+                <p>Hours of sleep recommended for many adults</p>
+
+            </div>
+
+
+            <div class="stat fade-up">
+
+                <h2>∞</h2>
+                <p>Reasons to stay healthy</p>
+
+            </div>
+
+
+            <div class="stat fade-up">
+
+                <h2>1</h2>
+                <p>Body to take care of</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="contact-box">
+
+            <div class="contact-info">
+
+                <h2>
+                    Let's spread health awareness.
+                </h2>
+
+                <p>
+                    Have an idea, question or suggestion?
+                    Send us a message.
+                </p>
+
+                <div class="contact-detail">
+                    📧 hello@vitality.com
+                </div>
+
+                <div class="contact-detail">
+                    📍 Healthy Living Community
+                </div>
+
+                <div class="contact-detail">
+                    🌿 Health starts with awareness.
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" onsubmit="sendMessage(event)">
+
+                <div class="input-group">
+
+                    <label>Your Name</label>
+
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Email Address</label>
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Your Message</label>
+
+                    <textarea
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button class="submit-btn" type="submit">
+                    Send Message →
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Vitality Health Awareness |
+            Made with <span class="heart">♥</span> for a healthier world
+        </p>
+
+    </footer>
+
+
+    <!-- SCROLL TOP BUTTON -->
+
+    <button id="topBtn" onclick="scrollToTop()">
+        ↑
+    </button>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* =========================
+           MOBILE MENU
+        ========================= */
+
+        function toggleMenu() {
+
+            const menu = document.getElementById("navLinks");
+
+            menu.classList.toggle("active");
+
+        }
+
+
+        
+        function toggleDarkMode() {
+
+            document.body.classList.toggle("dark");
+
+            const button = document.getElementById("themeBtn");
+
+            if (document.body.classList.contains("dark")) {
+
+                button.innerHTML = "☀️";
+
+            } else {
+
+                button.innerHTML = "🌙";
+
+            }
+
+        }
+
+
+
+        window.addEventListener("scroll", function() {
+
+            const button = document.getElementById("topBtn");
+
+            if (window.scrollY > 500) {
+
+                button.style.display = "block";
+
+            } else {
+
+                button.style.display = "none";
+
+            }
+
+        });
+
+
+        function scrollToTop() {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+
+        const observer = new IntersectionObserver(
+
+            function(entries) {
+
+                entries.forEach(function(entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                    }
+
+                });
+
+            },
+
+            {
+                threshold: 0.15
+            }
+
+        );
+
+
+        document.querySelectorAll(".fade-up").forEach(function(element) {
+
+            observer.observe(element);
+
+        });
+
+
+
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Thank you for supporting health awareness! 🌿"
+            );
+
+            event.target.reset();
+
+        }
+
+
+
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("active");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
